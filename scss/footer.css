@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/static/Montserrat-Italic.ttf) format("ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #1A1E30;
+  color: #FFF;
+}
+footer .container {
+  padding-inline: 20px;
+  display: flex;
+  max-width: 1080px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .container .info {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+footer .container p {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+footer .container .left {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .left .down_logo {
+  padding-bottom: 25px;
+}
+footer .container .left .down_logo img {
+  width: 75px;
+  height: 75px;
+}
+footer .container .right {
+  white-space: nowrap;
+}
+footer .container .footer_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+footer .container .footer_bottom .footer_mortgages {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 10px;
+  flex: 1 1 100%;
+}
+footer .container .footer_bottom .nav {
+  width: 10%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 100%;
+}
+footer .container .footer_bottom .nav p {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+footer .container .footer_bottom .footer_text {
+  padding-top: 20px;
+  font-size: 16px;
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container .footer_bottom {
+    align-items: center;
+  }
+  footer .container .footer_bottom .footer_mortgages {
+    text-align: center;
+  }
+  footer .container .footer_bottom .nav {
+    gap: 30px;
+    flex-direction: column;
+  }
+  footer .container .right .soc_net {
+    display: flex;
+    gap: 30px;
+  }
+  footer .container .right .info, footer .container .left .info {
+    font-size: 26px;
+  }
+  footer .container .left {
+    align-items: center;
+    text-align: center;
+  }
+}

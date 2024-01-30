@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/static/Montserrat-Italic.ttf) format('ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+}
+a{
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1A1E30;
+
+    color: #FFF;
+
+    .container {
+        padding-inline: 20px;
+        display: flex;
+        max-width: 1080px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .info {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-top: 30px;
+            padding-bottom: 25px;
+        }
+        p {
+
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+        
+
+            .down_logo{
+                img{
+                    width: 75px;
+                    height: 75px;
+                }
+                padding-bottom:25px ;
+               
+            }
+
+        }
+        .right {  
+            white-space: nowrap; 
+         
+        }
+        
+        .footer_bottom{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+                .footer_mortgages{
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    padding-top: 10px;
+                    flex: 1 1 100%;
+                }
+                .nav {
+                    width: 10%;
+                    padding-top: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex: 1 1 100%;
+        
+                    p {
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+                .footer_text{
+                    padding-top: 20px;
+                    font-size: 16px;
+                    margin: auto;
+                }
+        }
+        
+    }
+}
+
+@media (max-width:800px) {
+    footer{
+        .container{
+            flex-direction: column;
+            align-items: center;
+            .footer_bottom{
+            
+                align-items: center;
+                .footer_mortgages{
+                    text-align: center;
+                }
+              .nav{
+                gap: 30px;
+                flex-direction: column;
+                
+              }
+            }
+            .right{
+                .soc_net{
+                    display: flex;
+                    gap: 30px;
+                }
+            }
+            .right, .left {
+                .info{
+                    font-size: 26px;
+                }
+            }
+            .left{
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
+    }
+    
+}

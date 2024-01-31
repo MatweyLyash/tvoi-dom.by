@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     src: url(../fonts/static/Montserrat-Italic.ttf) format('ttf');
 }
 * {
@@ -39,7 +39,7 @@ header {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
-                font-family: Montserrat;
+                font-family: "Montserrat";
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 700;
@@ -80,10 +80,14 @@ header {
                     .catalog_down {
                         display: flex;
                         gap: 15px;
+                        
                     }
                     .drop {
-                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
                         position: absolute;
+                        top: 60px;
                         left: -5px;
                         padding-inline: 10px;
                         z-index: 2;
@@ -102,11 +106,11 @@ header {
                                 padding-top: 10px;
                                 box-sizing: border-box;
                             }
-                            
+                            &:nth-last-child(n){
+                                padding-bottom: 15px;
+                            }
                         }
-                        .last_item{
-                            padding-bottom: 10px;
-                        }
+                        
 
                     }
                     .catalog_down:hover+ .drop {
@@ -250,7 +254,7 @@ header {
 
             .ticker {
                 background-color:rgba(255, 255, 255, 0.6);
-                font-family: Montserrat;
+                
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
@@ -263,17 +267,20 @@ header {
 
         }
        section{
-            margin-top: 40px;
             display: flex;
-            gap: 10%;
+            margin-top: 40px;
+            padding-inline: 30px;
+            display: flex;
+            gap: 5%;
+            margin-bottom: 40px;
             .header_bottom {
                 display: flex;
                 flex-wrap: wrap; 
                 flex: 1 1 60%;
+                
               }
               
-              .information,
-              .some_extra_info {
+              .information{
                 flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
                 display: block;
                 text-align: justify;
@@ -284,6 +291,19 @@ header {
                 font-style: normal;
                 font-weight: 700;
                 margin:  0 15px 22px 0px; 
+              }
+              .some_extra_info {
+                flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
+                display: block;
+                text-align: justify;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.6);
+                font-family: Montserrat;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                margin:  0 15px 0px 0px; 
+                
               }
               
               .some_extra_info {
@@ -312,11 +332,11 @@ header {
                 flex: 1 1 30%;
                 flex-direction: row;
                 flex-wrap: wrap;
+                
                 justify-content: center;
-                h2{
+                .one_click_call{
                     padding-top: 10px;
-                   text-align: center;
-                   font-family: Montserrat;
+                    text-align: center;
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 700;
@@ -324,25 +344,56 @@ header {
                 p{
                     padding-inline: 15px;
                     text-align: justify;
-                    font-family: Montserrat;
+
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 300;
                     line-height: normal;
                 }
+                .input_with_icon{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    position: relative;
+                   
+                    .input_icon{
+                        position: absolute;
+                        left: 10%; 
+                        top: 5%;
+                    }
+                    input{
+                        text-indent: 25%;
+                        width: 90%;
+
+                    }
+                    input:not(:placeholder-shown) {
+                        text-indent: 25%;
+                      }
+                  
+                }
                 input{
                     width: 90%;
                     height: 41px;
+                    border: 2px solid #ccc; /* Установите цвет границы для обычного состояния */
+                    text-indent: 7%;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    outline: none;
+                  
                     &::placeholder{
-                        font-family: Montserrat;
+                      
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 300;
                         line-height: normal;
                     }
-                    &:focus{
-                        border: none;
-                    }
+                   
+                }
+                input:focus{
+                    border-color: #FF6B6B;
+                    
                 }
                 button{
                     border-radius: 15px;
@@ -352,10 +403,10 @@ header {
                     margin-bottom: 44px;
                     p{
                         padding: 5px 12px 5px 12px;
-                        font-family: Montserrat;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 300;
+                        line-height: normal;
                     }
                 }
 
@@ -382,6 +433,16 @@ header {
                     font-size: 26px;
                 }
             }
+            section{
+                .header_bottom{
+                    form{
+                        .one_click_call{
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
@@ -406,6 +467,46 @@ header {
                     }
                 }
             }
+            section{
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .header_bottom{
+                    flex:  1 1 100%;
+                    
+                    padding-bottom: 25px;
+                    .information, .some_extra_info{
+                        flex: 1 1 50%;
+                        margin-right: 0px;
+                    }
+                }
+                
+                form{
+                    gap: 30px;
+                    max-width: 50%;
+                    margin: auto;
+                    
+                  .input_with_icon{
+
+                    input{
+                        text-indent: 70px;
+                    }
+                    button{
+                        .in_button{
+                            padding: 20px;
+                        }
+                    }
+                  }
+                }
+            }
         }
     }
 }
+// @media (max-width:636){
+
+//     .information, .some_extra_info{
+//         margin-right: 0px;
+//     }
+                
+
+// }

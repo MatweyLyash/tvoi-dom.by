@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @font-face {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   src: url(../fonts/static/Montserrat-Italic.ttf) format("ttf");
 }
 * {
@@ -39,7 +39,7 @@ header .container .header_top nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -75,7 +75,11 @@ header .container .header_top nav .down_menu .catalog_down {
   gap: 15px;
 }
 header .container .header_top nav .down_menu .drop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: absolute;
+  top: 60px;
   left: -5px;
   padding-inline: 10px;
   z-index: 2;
@@ -94,8 +98,8 @@ header .container .header_top nav .down_menu .drop a p {
   padding-top: 10px;
   box-sizing: border-box;
 }
-header .container .header_top nav .down_menu .drop .last_item {
-  padding-bottom: 10px;
+header .container .header_top nav .down_menu .drop a:nth-last-child(n) {
+  padding-bottom: 15px;
 }
 header .container .header_top nav .down_menu .catalog_down:hover + .drop {
   max-height: 300px;
@@ -210,7 +214,6 @@ header .container .header_top .burger_menu .burger_list.open {
 }
 header .container .header_top .ticker {
   background-color: rgba(255, 255, 255, 0.6);
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -221,17 +224,19 @@ header .container .header_top .ticker {
   border-bottom: 2px solid black;
 }
 header .container section {
-  margin-top: 40px;
   display: flex;
-  gap: 10%;
+  margin-top: 40px;
+  padding-inline: 30px;
+  display: flex;
+  gap: 5%;
+  margin-bottom: 40px;
 }
 header .container section .header_bottom {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 60%;
 }
-header .container section .information,
-header .container section .some_extra_info {
+header .container section .information {
   flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
   display: block;
   text-align: justify;
@@ -242,6 +247,18 @@ header .container section .some_extra_info {
   font-style: normal;
   font-weight: 700;
   margin: 0 15px 22px 0px;
+}
+header .container section .some_extra_info {
+  flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
+  display: block;
+  text-align: justify;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 15px 0px 0px;
 }
 header .container section .some_extra_info {
   display: flex;
@@ -266,10 +283,9 @@ header .container section form {
   flex-wrap: wrap;
   justify-content: center;
 }
-header .container section form h2 {
+header .container section form .one_click_call {
   padding-top: 10px;
   text-align: center;
-  font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -277,32 +293,57 @@ header .container section form h2 {
 header .container section form p {
   padding-inline: 15px;
   text-align: justify;
-  font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
+header .container section form .input_with_icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+header .container section form .input_with_icon .input_icon {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+header .container section form .input_with_icon input {
+  text-indent: 25%;
+  width: 90%;
+}
+header .container section form .input_with_icon input:not(:-moz-placeholder-shown) {
+  text-indent: 25%;
+}
+header .container section form .input_with_icon input:not(:placeholder-shown) {
+  text-indent: 25%;
+}
 header .container section form input {
   width: 90%;
   height: 41px;
+  border: 2px solid #ccc; /* Установите цвет границы для обычного состояния */
+  text-indent: 7%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  outline: none;
 }
 header .container section form input::-moz-placeholder {
-  font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 header .container section form input::placeholder {
-  font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 header .container section form input:focus {
-  border: none;
+  border-color: #FF6B6B;
 }
 header .container section form button {
   border-radius: 15px;
@@ -313,10 +354,10 @@ header .container section form button {
 }
 header .container section form button p {
   padding: 5px 12px 5px 12px;
-  font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
+  line-height: normal;
 }
 
 @media (max-width: 1080px) {
@@ -326,6 +367,9 @@ header .container section form button p {
 }
 @media (max-width: 920px) {
   header .container .header_top nav {
+    font-size: 26px;
+  }
+  header .container section .header_bottom form .one_click_call {
     font-size: 26px;
   }
 }
@@ -340,5 +384,29 @@ header .container section form button p {
   header .container .header_top .burger_menu .burger_list {
     font-size: 20px;
     gap: 20px;
+  }
+  header .container section {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  header .container section .header_bottom {
+    flex: 1 1 100%;
+    padding-bottom: 25px;
+  }
+  header .container section .header_bottom .information, header .container section .header_bottom .some_extra_info {
+    flex: 1 1 50%;
+    margin-right: 0px;
+  }
+  header .container section form {
+    gap: 30px;
+    max-width: 50%;
+    margin: auto;
+  }
+  header .container section form .input_with_icon input {
+    text-indent: 70px;
+  }
+  header .container section form .input_with_icon button .in_button {
+    padding: 20px;
   }
 }

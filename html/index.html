@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../scss/footer.css">
 <style>
     @font-face {
-        font-family: Monserrat;
+        font-family: "Monserrat";
         src: url(../fonts/static/Montserrat-Italic.ttf) format('ttf');
     }
 </style>
@@ -135,14 +135,18 @@
                     </div>
                 </div>
                 <form action="" enctype="text/plain"><!--указать в action куда будет высылаться форма-->
-                    <h2>Звонок в один<br> клик</h2>
+                    <h2 class="one_click_call">Звонок в один<br> клик</h2>
                     <p>Вы можете получить бесплатную консультацию заполнив форму ниже.<br>Мы позвоним вам в течении 24ч
                     </p>
                     <!-- <label for="phone_number">Номер телефона</label> -->
-                    <input type="tel" src="" alt="" placeholder="+375" pattern="[0-9]{9}" required>
-                    <input type="text" placeholder="Как в Вас обращаться?" required>
+                    <div class="input_with_icon">
+                        <img src="../image/belarus_icon.svg" alt="" class="input_icon">
+                        <input type="tel" src="" alt="" placeholder="+375" pattern="[0-9]{9}" required>
+                    </div>
+                    
+                    <input type="text" placeholder="Как в Вам обращаться?" required>
                     <button type="submit">
-                        <p>Заказать консультацию</p>
+                        <p class="in_button">Заказать консультацию</p>
                     </button>
                 </form>
             </section>

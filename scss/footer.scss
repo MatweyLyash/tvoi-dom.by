@@ -9,7 +9,8 @@
     text-decoration: none;
     font-family: Montserrat, sans-serif;
 }
-a{
+
+a {
     color: black;
 }
 
@@ -27,14 +28,16 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+
         .info {
-            font-size: 36px;
+            font-size: 30px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             padding-top: 30px;
             padding-bottom: 25px;
         }
+
         p {
 
             font-size: 24px;
@@ -46,96 +49,116 @@ footer {
         .left {
             display: flex;
             flex-direction: column;
-        
 
-            .down_logo{
-                img{
-                    width: 75px;
-                    height: 75px;
+
+            .down_logo {
+                img {
+                    width: 50px;
+                    height: 50px;
                 }
-                padding-bottom:25px ;
-               
+
+                padding-bottom:25px;
+
             }
 
         }
-        .right {  
-            white-space: nowrap; 
-         
+
+        .right {
+            white-space: nowrap;
+
+            .soc_net {
+                a {
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+
         }
-        
-        .footer_bottom{
+
+        .footer_bottom {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
 
-                .footer_mortgages{
-                    font-size: 36px;
+            .footer_mortgages {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                padding-top: 10px;
+                flex: 1 1 100%;
+            }
+
+            .nav {
+                width: 10%;
+                padding-top: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                flex: 1 1 100%;
+
+                p {
+                    font-size: 20px;
                     font-style: normal;
                     font-weight: 700;
-                    padding-top: 10px;
-                    flex: 1 1 100%;
+                    line-height: normal;
                 }
-                .nav {
-                    width: 10%;
-                    padding-top: 10px;
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    align-items: center;
-                    flex: 1 1 100%;
-        
-                    p {
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: normal;
-                    }
-                }
-                .footer_text{
-                    padding-top: 20px;
-                    font-size: 16px;
-                    margin: auto;
-                }
+            }
+
+            .footer_text {
+                padding-top: 20px;
+                font-size: 16px;
+                margin: auto;
+            }
         }
-        
+
     }
 }
 
 @media (max-width:800px) {
-    footer{
-        .container{
+    footer {
+        .container {
             flex-direction: column;
             align-items: center;
-            .footer_bottom{
-            
+
+            .footer_bottom {
+
                 align-items: center;
-                .footer_mortgages{
+
+                .footer_mortgages {
                     text-align: center;
                 }
-              .nav{
-                gap: 30px;
-                flex-direction: column;
-                
-              }
+
+                .nav {
+                    gap: 30px;
+                    flex-direction: column;
+
+                }
             }
-            .right{
-                .soc_net{
+
+            .right {
+                .soc_net {
                     display: flex;
                     gap: 30px;
                 }
             }
-            .right, .left {
-                .info{
+
+            .right,
+            .left {
+                .info {
                     font-size: 26px;
                 }
             }
-            .left{
+
+            .left {
                 align-items: center;
                 text-align: center;
             }
         }
-        
+
     }
-    
+
 }

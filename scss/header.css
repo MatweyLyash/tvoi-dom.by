@@ -15,14 +15,16 @@ header {
   justify-content: space-around;
   color: black;
   background-image: url(../image/back_image_main\ 1.png);
-  background-size: cover; /* Растягивает изображение так, чтобы оно полностью покрывало фон */
-  background-position: center; /* Центрирует изображение на фоне */
+  background-size: cover;
+  /* Растягивает изображение так, чтобы оно полностью покрывало фон */
+  background-position: center;
+  /* Центрирует изображение на фоне */
   background-repeat: no-repeat;
 }
 header .container {
   padding-inline: 20px;
   display: flex;
-  width: 1080px;
+  width: 1200px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -40,19 +42,18 @@ header .container .header_top nav {
   justify-content: space-around;
   align-items: center;
   font-family: "Montserrat";
-  font-size: 30px;
-  font-style: normal;
+  font-size: 20px;
   font-weight: 700;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 header .container .header_top nav .header_logo {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
 }
-header .container .header_top nav a > p {
+header .container .header_top nav a > .underline {
   position: relative;
 }
-header .container .header_top nav a > p:after {
+header .container .header_top nav a > .underline:after {
   position: absolute;
   content: "";
   left: 0;
@@ -64,7 +65,7 @@ header .container .header_top nav a > p:after {
   transition: 0.3s;
   border-bottom: 3px solid #FF6B6B;
 }
-header .container .header_top nav a > p:hover:after {
+header .container .header_top nav a > .underline:hover:after {
   width: 100%;
 }
 header .container .header_top nav .down_menu {
@@ -79,7 +80,7 @@ header .container .header_top nav .down_menu .drop {
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: -5px;
   padding-inline: 10px;
   z-index: 2;
@@ -93,7 +94,7 @@ header .container .header_top nav .down_menu .drop:hover {
   max-height: 330px;
 }
 header .container .header_top nav .down_menu .drop a p {
-  font-size: 26px;
+  font-size: 20px;
   position: relative;
   padding-top: 10px;
   box-sizing: border-box;
@@ -107,6 +108,7 @@ header .container .header_top nav .down_menu .catalog_down:hover + .drop {
 }
 header .container .header_top .burger_menu {
   display: none;
+  justify-content: space-around;
 }
 header .container .header_top .burger_menu .burger_bottom {
   border-radius: 2px;
@@ -163,8 +165,8 @@ header .container .header_top .burger_menu .burger_list p {
 }
 header .container .header_top .burger_menu .burger_list .header_logo {
   padding-top: 20px;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 header .container .header_top .burger_menu .burger_list .catalog_more {
   display: flex;
@@ -214,12 +216,12 @@ header .container .header_top .burger_menu .burger_list.open {
 }
 header .container .header_top .ticker {
   background-color: rgba(255, 255, 255, 0.6);
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
@@ -237,7 +239,8 @@ header .container section .header_bottom {
   flex: 1 1 60%;
 }
 header .container section .information {
-  flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
+  flex: 1 1 calc(50% - 30px);
+  /* Учтите отступы (15px слева и 15px справа) для каждого блока */
   display: block;
   text-align: justify;
   padding: 15px;
@@ -249,7 +252,8 @@ header .container section .information {
   margin: 0 15px 22px 0px;
 }
 header .container section .some_extra_info {
-  flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
+  flex: 1 1 calc(50% - 30px);
+  /* Учтите отступы (15px слева и 15px справа) для каждого блока */
   display: block;
   text-align: justify;
   padding: 15px;
@@ -262,12 +266,18 @@ header .container section .some_extra_info {
 }
 header .container section .some_extra_info {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-size: 16px;
   align-items: center;
 }
+header .container section .some_extra_info p {
+  width: 50%;
+}
 header .container section .some_extra_info .header_soc_net {
   align-self: flex-end;
+  align-self: center;
   display: flex;
   gap: 20px;
 }
@@ -279,6 +289,7 @@ header .container section form {
   background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   flex: 1 1 30%;
+  gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -322,7 +333,8 @@ header .container section form .input_with_icon input:not(:placeholder-shown) {
 header .container section form input {
   width: 90%;
   height: 41px;
-  border: 2px solid #ccc; /* Установите цвет границы для обычного состояния */
+  border: 2px solid #ccc;
+  /* Установите цвет границы для обычного состояния */
   text-indent: 7%;
   font-size: 16px;
   font-style: normal;
@@ -351,6 +363,7 @@ header .container section form button {
   border: none;
   margin-top: 20px;
   margin-bottom: 44px;
+  cursor: pointer;
 }
 header .container section form button p {
   padding: 5px 12px 5px 12px;
@@ -367,19 +380,25 @@ header .container section form button p {
 }
 @media (max-width: 920px) {
   header .container .header_top nav {
-    font-size: 26px;
+    font-size: 16px;
   }
   header .container section .header_bottom form .one_click_call {
     font-size: 26px;
   }
 }
 @media (max-width: 800px) {
+  header .container {
+    width: 100%;
+  }
   header .container .header_top nav {
     display: none;
   }
   header .container .header_top .burger_menu {
+    padding-top: 10px;
     display: flex;
-    align-self: flex-end;
+  }
+  header .container .header_top .burger_menu a .header_logo_mobile {
+    width: 50px;
   }
   header .container .header_top .burger_menu .burger_list {
     font-size: 20px;
@@ -394,13 +413,14 @@ header .container section form button p {
     flex: 1 1 100%;
     padding-bottom: 25px;
   }
-  header .container section .header_bottom .information, header .container section .header_bottom .some_extra_info {
+  header .container section .header_bottom .information,
+  header .container section .header_bottom .some_extra_info {
     flex: 1 1 50%;
     margin-right: 0px;
   }
   header .container section form {
     gap: 30px;
-    max-width: 50%;
+    max-width: 300px;
     margin: auto;
   }
   header .container section form .input_with_icon input {
@@ -408,5 +428,15 @@ header .container section form button p {
   }
   header .container section form .input_with_icon button .in_button {
     padding: 20px;
+  }
+}
+@media (max-width: 500px) {
+  header .container section .header_bottom .some_extra_info {
+    justify-content: center;
+    gap: 20px;
+  }
+  header .container section .header_bottom .some_extra_info p {
+    text-align: center;
+    width: 100%;
   }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../scss/header.css">
 <link rel="stylesheet" href="../scss/media.css">
 <link rel="stylesheet" href="../scss/footer.css">
+<link rel="stylesheet" href="../scss/main.css">
 <style>
     @font-face {
         font-family: "Monserrat";
@@ -22,45 +23,49 @@
                 <nav>
                     <a href=""><img src="../image/logo.svg" alt="" class="header_logo"></a>
                     <a href="">
-                        <p>О НАС</p>
+                        <p class="underline">О НАС</p>
                     </a>
                     <div class="down_menu">
                         <div class="catalog_down">
                             <a href="">
-                                <p>КАТАЛОГ</p>
+                                <p class="underline">КАТАЛОГ</p>
                             </a>
                             <img src="../image/arrow.svg" alt="">
                         </div>
                         <div class="drop">
                             <a href="" class="first_item">
-                                <p>Заборы</p>
+                                <p class="underline">Заборы</p>
                             </a>
                             <a href="">
-                                <p>Колитки/Ворота</p>
+                                <p class="underline">Колитки/Ворота</p>
                             </a>
                             <a href="">
-                                <p>Металлоконструкции</p>
+                                <p class="underline">Металлоконструкции</p>
                             </a>
                             <a href="">
-                                <p>Акции!</p>
+                                <p class="underline">Акции!</p>
                             </a>
                             <a href="" class="last_item">
-                                <p>и т.д.</p>
+                                <p class="underline">и т.д.</p>
                             </a>
                         </div>
                     </div>
 
                     <a href="">
-                        <p>РЕМОНТ-МОНТАЖ</p>
+                        <p class="underline">РЕМОНТ-МОНТАЖ</p>
                     </a>
                     <a href="">
-                        <p>ГАРАНТИИ</p>
+                        <p class="underline">ГАРАНТИИ</p>
                     </a>
                     <a href="">
-                        <p>ЧаВо</p>
+                        <p class="underline">ЧаВо</p>
                     </a>
                 </nav>
                 <div class="burger_menu">
+                    <a href="">
+                        <img src="../image/logo.svg" alt="" class="header_logo_mobile">
+                        <p>Твой-дом.by</p>
+                    </a>
                     <div class="burger_bottom">
                         <span></span>
                         <span></span>
@@ -141,9 +146,9 @@
                     <!-- <label for="phone_number">Номер телефона</label> -->
                     <div class="input_with_icon">
                         <img src="../image/belarus_icon.svg" alt="" class="input_icon">
-                        <input type="tel" src="" alt="" placeholder="+375" pattern="[0-9]{9}" required>
+                        <input type="tel" src="" alt="" placeholder="+375" pattern="[0-9,+]{13}" required value="+375">
                     </div>
-                    
+
                     <input type="text" placeholder="Как в Вам обращаться?" required>
                     <button type="submit">
                         <p class="in_button">Заказать консультацию</p>
@@ -152,6 +157,149 @@
             </section>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <div class="top_text">
+                <h1>Наши предложения</h1>
+                <p>Мы изготавливаем и монтируем все виды металлических заборов, калиток, ворот.
+                    Заборы под ключ от 30 руб. за 1 метр полностью готового забора!</p>
+            </div>
+            <div class="sector">
+                <div class="sect1">
+                    <a href="">
+                        <div class="left_block">
+                            <img src="../image/prof_zabor.png" alt="">
+                            <p class="item_name">Заборы из профнастила </p>
+                            <p class="item_cost">от 70 руб/пог.</p>
+                        </div>
+                    </a>
+
+                    <div class="right_block">
+                        <div class=" row">
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/metallprof_block1.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/net_block2.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/3d_block3.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/net_block2.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect2">
+                    <div class="left_block_2">
+                        <div class=" row">
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/metallprof_block1.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/net_block2.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/3d_block3.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/net_block2.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="right_block_2">
+                            <img src="../image/prof_zabor.png" alt="">
+                            <p class="item_name">Заборы из профнастила </p>
+                            <p class="item_cost">от 70 руб/пог.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="sect3">
+                    <a href="">
+                        <div class="left_block">
+                            <img src="../image/prof_zabor.png" alt="">
+                            <p class="item_name">Заборы из профнастила </p>
+                            <p class="item_cost">от 70 руб/пог.</p>
+                        </div>
+                    </a>
+
+                    <div class="right_block">
+                        <div class=" row">
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/metallprof_block1.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                            <div class="b_in_b">
+                                <a href="">
+                                    <img src="../image/net_block2.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="long_b_in_b">
+                                <a href="">
+                                    <img src="../image/long_block.png" alt="">
+                                    <p class="item_name_block">Заборы из профнастила </p>
+                                    <p class="item_cost_block">от 70 руб/пог.</p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maybe_catalog">
+                <p>Не нашли, что искали?<br>
+                    Загляните в каталог!</p>
+            </div>
+        </div>
+
+    </main>
+    </div>
+
     <footer>
         <div class="container">
 

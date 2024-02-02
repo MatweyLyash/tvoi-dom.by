@@ -2,6 +2,7 @@
     font-family: "Montserrat";
     src: url(../fonts/static/Montserrat-Italic.ttf) format('ttf');
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -13,15 +14,17 @@ header {
     display: flex;
     justify-content: space-around;
     color: black;
-    background-image:url(../image/back_image_main\ 1.png);
-    background-size: cover; /* Растягивает изображение так, чтобы оно полностью покрывало фон */
-    background-position: center; /* Центрирует изображение на фоне */
-    background-repeat: no-repeat; 
+    background-image: url(../image/back_image_main\ 1.png);
+    background-size: cover;
+    /* Растягивает изображение так, чтобы оно полностью покрывало фон */
+    background-position: center;
+    /* Центрирует изображение на фоне */
+    background-repeat: no-repeat;
 
     .container {
         padding-inline: 20px;
         display: flex;
-        width: 1080px;
+        width: 1200px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -34,24 +37,23 @@ header {
             justify-content: space-between;
 
             nav {
-                background-color:rgba(255, 255, 255, 0.6);
+                background-color: rgba(255, 255, 255, 0.6);
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
                 font-family: "Montserrat";
-                font-size: 30px;
-                font-style: normal;
+                font-size: 20px;
                 font-weight: 700;
-                padding-top: 20px;
+                padding-top: 10px;
 
 
                 .header_logo {
-                    width: 75px;
-                    height: 75px;
+                    width: 50px;
+                    height: 50px;
                 }
 
-                a>p {
+                a>.underline {
                     position: relative;
 
                     &:after {
@@ -74,20 +76,22 @@ header {
                 }
 
                 .down_menu {
-                    
-                  
+
+
                     position: relative;
+
                     .catalog_down {
                         display: flex;
                         gap: 15px;
-                        
+
                     }
+
                     .drop {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-around;
                         position: absolute;
-                        top: 60px;
+                        top: 40px;
                         left: -5px;
                         padding-inline: 10px;
                         z-index: 2;
@@ -96,24 +100,28 @@ header {
                         max-height: 0px;
                         overflow: hidden;
                         transition: max-height 0.4s linear;
-                        &:hover{
+
+                        &:hover {
                             max-height: 330px;
                         }
-                        a{
-                            p{
-                                font-size: 26px;
+
+                        a {
+                            p {
+                                font-size: 20px;
                                 position: relative;
                                 padding-top: 10px;
                                 box-sizing: border-box;
                             }
-                            &:nth-last-child(n){
+
+                            &:nth-last-child(n) {
                                 padding-bottom: 15px;
                             }
                         }
-                        
+
 
                     }
-                    .catalog_down:hover+ .drop {
+
+                    .catalog_down:hover+.drop {
                         max-height: 300px;
                         transition: max-height 0.4s linear;
                     }
@@ -122,6 +130,7 @@ header {
 
             .burger_menu {
                 display: none;
+                justify-content: space-around;
 
                 .burger_bottom {
                     border-radius: 2px;
@@ -189,8 +198,8 @@ header {
 
                     .header_logo {
                         padding-top: 20px;
-                        width: 20px;
-                        height: 20px;
+                        width: 50px;
+                        height: 50px;
                     }
 
                     .catalog_more {
@@ -235,6 +244,7 @@ header {
                                 height: 2px;
                                 background-color: #FF6B6B;
                                 transform: translateX(-50%);
+
                             }
                         }
 
@@ -253,35 +263,38 @@ header {
             }
 
             .ticker {
-                background-color:rgba(255, 255, 255, 0.6);
-                
-                font-size: 18px;
+                background-color: rgba(255, 255, 255, 0.6);
+
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                padding-top: 11px;
-                padding-bottom: 11px;
+                padding-top: 8px;
+                padding-bottom: 8px;
                 border-top: 2px solid black;
                 border-bottom: 2px solid black;
             }
 
         }
-       section{
+
+        section {
             display: flex;
             margin-top: 40px;
             padding-inline: 30px;
             display: flex;
             gap: 5%;
             margin-bottom: 40px;
+
             .header_bottom {
                 display: flex;
-                flex-wrap: wrap; 
+                flex-wrap: wrap;
                 flex: 1 1 60%;
-                
-              }
-              
-              .information{
-                flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
+
+            }
+
+            .information {
+                flex: 1 1 calc(50% - 30px);
+                /* Учтите отступы (15px слева и 15px справа) для каждого блока */
                 display: block;
                 text-align: justify;
                 padding: 15px;
@@ -290,10 +303,12 @@ header {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
-                margin:  0 15px 22px 0px; 
-              }
-              .some_extra_info {
-                flex: 1 1 calc(50% - 30px); /* Учтите отступы (15px слева и 15px справа) для каждого блока */
+                margin: 0 15px 22px 0px;
+            }
+
+            .some_extra_info {
+                flex: 1 1 calc(50% - 30px);
+                /* Учтите отступы (15px слева и 15px справа) для каждого блока */
                 display: block;
                 text-align: justify;
                 padding: 15px;
@@ -302,46 +317,56 @@ header {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
-                margin:  0 15px 0px 0px; 
-                
-              }
-              
-              .some_extra_info {
+                margin: 0 15px 0px 0px;
+
+            }
+
+            .some_extra_info {
                 display: flex;
-                justify-content: space-between;
-                font-size: 16px; 
-                align-items: center;
-                .header_soc_net {
-                    align-self: flex-end;
-                    display: flex;
-                    gap: 20px;
-                  }
-                  
-                  .header_soc_net img {
-                    width: 50px;
-                    height: 50px;
-                  }
-              }
-              
-              
-              
-            form{
-                
-                background-color:rgba(255, 255, 255, 0.6);
-                display: flex;
-                flex: 1 1 30%;
                 flex-direction: row;
                 flex-wrap: wrap;
-                
+                justify-content: space-between;
+                font-size: 16px;
+                align-items: center;
+
+                p {
+                    width: 50%;
+                }
+
+                .header_soc_net {
+                    align-self: flex-end;
+                    align-self: center;
+                    display: flex;
+                    gap: 20px;
+                }
+
+                .header_soc_net img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+
+
+            form {
+                background-color: rgba(255, 255, 255, 0.6);
+                display: flex;
+                flex: 1 1 30%;
+                gap: 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+
                 justify-content: center;
-                .one_click_call{
+
+                .one_click_call {
                     padding-top: 10px;
                     text-align: center;
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 700;
                 }
-                p{
+
+                p {
                     padding-inline: 15px;
                     text-align: justify;
 
@@ -350,58 +375,67 @@ header {
                     font-weight: 300;
                     line-height: normal;
                 }
-                .input_with_icon{
+
+                .input_with_icon {
                     display: flex;
                     justify-content: center;
                     width: 100%;
                     position: relative;
-                   
-                    .input_icon{
+
+                    .input_icon {
                         position: absolute;
-                        left: 10%; 
+                        left: 10%;
                         top: 5%;
                     }
-                    input{
+
+                    input {
                         text-indent: 25%;
                         width: 90%;
 
                     }
+
                     input:not(:placeholder-shown) {
                         text-indent: 25%;
-                      }
-                  
+                    }
+
                 }
-                input{
+
+                input {
                     width: 90%;
                     height: 41px;
-                    border: 2px solid #ccc; /* Установите цвет границы для обычного состояния */
+                    border: 2px solid #ccc;
+                    /* Установите цвет границы для обычного состояния */
                     text-indent: 7%;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 300;
                     line-height: normal;
                     outline: none;
-                  
-                    &::placeholder{
-                      
+
+                    &::placeholder {
+
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 300;
                         line-height: normal;
                     }
-                   
+
                 }
-                input:focus{
+
+                input:focus {
                     border-color: #FF6B6B;
-                    
+
                 }
-                button{
+
+                button {
                     border-radius: 15px;
                     background: #FF6B6B;
                     border: none;
                     margin-top: 20px;
                     margin-bottom: 44px;
-                    p{
+                    cursor: pointer;
+
+                    p {
                         padding: 5px 12px 5px 12px;
                         font-size: 16px;
                         font-style: normal;
@@ -410,39 +444,41 @@ header {
                     }
                 }
 
-                
+
             }
-       }
+        }
     }
 }
 
-@media (max-width:1080px){
-    header{
-        .container{
+@media (max-width:1080px) {
+    header {
+        .container {
             padding: 0;
         }
 
     }
-    
+
 }
+
 @media (max-width: 920px) {
     header {
         .container {
             .header_top {
                 nav {
-                    font-size: 26px;
+                    font-size: 16px;
                 }
             }
-            section{
-                .header_bottom{
-                    form{
-                        .one_click_call{
+
+            section {
+                .header_bottom {
+                    form {
+                        .one_click_call {
                             font-size: 26px;
                         }
                     }
                 }
             }
-            
+
         }
     }
 }
@@ -451,6 +487,8 @@ header {
 
     header {
         .container {
+            width: 100%;
+
             .header_top {
 
                 nav {
@@ -458,8 +496,14 @@ header {
                 }
 
                 .burger_menu {
+                    padding-top: 10px;
                     display: flex;
-                    align-self: flex-end;
+
+                    a {
+                        .header_logo_mobile {
+                            width: 50px;
+                        }
+                    }
 
                     .burger_list {
                         font-size: 20px;
@@ -467,46 +511,67 @@ header {
                     }
                 }
             }
-            section{
+
+            section {
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                .header_bottom{
-                    flex:  1 1 100%;
-                    
+
+                .header_bottom {
+                    flex: 1 1 100%;
+
                     padding-bottom: 25px;
-                    .information, .some_extra_info{
+
+                    .information,
+                    .some_extra_info {
                         flex: 1 1 50%;
                         margin-right: 0px;
                     }
                 }
-                
-                form{
-                    gap: 30px;
-                    max-width: 50%;
-                    margin: auto;
-                    
-                  .input_with_icon{
 
-                    input{
-                        text-indent: 70px;
-                    }
-                    button{
-                        .in_button{
-                            padding: 20px;
+                form {
+                    gap: 30px;
+                    max-width: 300px;
+                    margin: auto;
+
+                    .input_with_icon {
+
+                        input {
+                            text-indent: 70px;
+                        }
+
+                        button {
+                            .in_button {
+                                padding: 20px;
+                            }
                         }
                     }
-                  }
                 }
             }
         }
     }
 }
-// @media (max-width:636){
 
-//     .information, .some_extra_info{
-//         margin-right: 0px;
-//     }
-                
+@media (max-width:500px) {
 
-// }
+    header {
+        .container {
+            section {
+                .header_bottom {
+                    .some_extra_info {
+                        justify-content: center;
+                        gap: 20px;
+
+                        p {
+                            text-align: center;
+                            width: 100%;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

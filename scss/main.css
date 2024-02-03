@@ -251,8 +251,11 @@ main .container .sector .sect3 .right_block .row .long_b_in_b {
 main .container .sector .sect3 .right_block .row .long_b_in_b a {
   padding-bottom: 0;
 }
-main .container .sector .sect3 .right_block .row .long_b_in_b a img {
+main .container .sector .sect3 .right_block .row .long_b_in_b a .long_block {
   height: 10%;
+}
+main .container .sector .sect3 .right_block .row .long_b_in_b a .long_block_now_little {
+  display: none;
 }
 main .container .sector .sect3 .right_block .row .long_b_in_b a .item_name_block,
 main .container .sector .sect3 .right_block .row .long_b_in_b a .item_cost_block {
@@ -282,6 +285,12 @@ main .container .maybe_catalog p {
   }
 }
 @media (max-width: 920px) {
+  main .container .top_text h1 {
+    font-size: 26px;
+  }
+  main .container .top_text p {
+    line-height: 26px;
+  }
   main .container .sector .sect1 .right_block .row .b_in_b a .item_name_block,
   main .container .sector .sect1 .right_block .row .long_b_in_b a .item_name_block,
   main .container .sector .sect1 .left_block_2 .row .b_in_b a .item_name_block,
@@ -407,6 +416,13 @@ main .container .maybe_catalog p {
   }
 }
 @media (max-width: 500px) {
+  main .container .top_text h1 {
+    font-size: 20px;
+  }
+  main .container .top_text p {
+    line-height: 20px;
+    font-size: 16px;
+  }
   main .container .sector .sect1,
   main .container .sector .sect2,
   main .container .sector .sect3 {
@@ -494,6 +510,34 @@ main .container .maybe_catalog p {
     width: 100%;
     padding-top: 10px;
     font-size: 16px;
+  }
+  main .container .sector .sect1 .right_block .row .b_in_b a .long_block,
+  main .container .sector .sect1 .right_block .row .long_b_in_b a .long_block,
+  main .container .sector .sect1 .left_block_2 .row .b_in_b a .long_block,
+  main .container .sector .sect1 .left_block_2 .row .long_b_in_b a .long_block,
+  main .container .sector .sect2 .right_block .row .b_in_b a .long_block,
+  main .container .sector .sect2 .right_block .row .long_b_in_b a .long_block,
+  main .container .sector .sect2 .left_block_2 .row .b_in_b a .long_block,
+  main .container .sector .sect2 .left_block_2 .row .long_b_in_b a .long_block,
+  main .container .sector .sect3 .right_block .row .b_in_b a .long_block,
+  main .container .sector .sect3 .right_block .row .long_b_in_b a .long_block,
+  main .container .sector .sect3 .left_block_2 .row .b_in_b a .long_block,
+  main .container .sector .sect3 .left_block_2 .row .long_b_in_b a .long_block {
+    display: none;
+  }
+  main .container .sector .sect1 .right_block .row .b_in_b a .long_block_now_little,
+  main .container .sector .sect1 .right_block .row .long_b_in_b a .long_block_now_little,
+  main .container .sector .sect1 .left_block_2 .row .b_in_b a .long_block_now_little,
+  main .container .sector .sect1 .left_block_2 .row .long_b_in_b a .long_block_now_little,
+  main .container .sector .sect2 .right_block .row .b_in_b a .long_block_now_little,
+  main .container .sector .sect2 .right_block .row .long_b_in_b a .long_block_now_little,
+  main .container .sector .sect2 .left_block_2 .row .b_in_b a .long_block_now_little,
+  main .container .sector .sect2 .left_block_2 .row .long_b_in_b a .long_block_now_little,
+  main .container .sector .sect3 .right_block .row .b_in_b a .long_block_now_little,
+  main .container .sector .sect3 .right_block .row .long_b_in_b a .long_block_now_little,
+  main .container .sector .sect3 .left_block_2 .row .b_in_b a .long_block_now_little,
+  main .container .sector .sect3 .left_block_2 .row .long_b_in_b a .long_block_now_little {
+    display: block;
   }
   main .container .sector .sect1 .right_block .row .b_in_b a img,
   main .container .sector .sect1 .right_block .row .long_b_in_b a img,

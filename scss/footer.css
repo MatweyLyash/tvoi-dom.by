@@ -109,7 +109,9 @@ footer .container .footer_bottom .footer_text {
     flex-direction: column;
   }
   footer .container .right .soc_net {
+    padding-top: 20px;
     display: flex;
+    justify-content: space-around;
     gap: 30px;
   }
   footer .container .right .info,

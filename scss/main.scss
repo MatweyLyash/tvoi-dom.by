@@ -6,6 +6,7 @@
 }
 
 main {
+
     display: flex;
     justify-content: center;
     background-color: rgb(238, 238, 238);
@@ -210,8 +211,12 @@ main {
                             a {
                                 padding-bottom: 0;
 
-                                img {
+                                .long_block {
                                     height: 10%;
+                                }
+
+                                .long_block_now_little {
+                                    display: none;
                                 }
 
                                 .item_name_block,
@@ -267,6 +272,16 @@ main {
 @media (max-width:920px) {
     main {
         .container {
+            .top_text {
+                h1 {
+                    font-size: 26px;
+                }
+
+                p {
+                    line-height: 26px;
+                }
+            }
+
             .sector {
 
                 .sect1,
@@ -380,6 +395,17 @@ main {
 @media (max-width:500px) {
     main {
         .container {
+            .top_text {
+                h1 {
+                    font-size: 20px;
+                }
+
+                p {
+                    line-height: 20px;
+                    font-size: 16px;
+                }
+            }
+
             .sector {
 
                 .sect1,
@@ -427,6 +453,14 @@ main {
                                         width: 100%;
                                         padding-top: 10px;
                                         font-size: 16px;
+                                    }
+
+                                    .long_block {
+                                        display: none;
+                                    }
+
+                                    .long_block_now_little {
+                                        display: block;
                                     }
 
                                     img {

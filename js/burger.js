@@ -1,6 +1,7 @@
 const menuIcon = document.querySelector('.burger_bottom');
 const arrowIcon = document.querySelector('.arrow_more');
 const bodyHidden = document.body;
+const arrowFilter = document.querySelector('.arrow_filter');
 if (menuIcon) {
     const menuBody = document.querySelector('.burger_list');
     menuIcon.addEventListener('click', () => {
@@ -14,6 +15,15 @@ if (arrowIcon) {
     arrowIcon.addEventListener('click', () => {
         addCatalog.classList.toggle('open');
         arrowIcon.classList.toggle('open');
+    })
+}
+if (arrowFilter) {
+    const filter = document.querySelector('.filter');
+    const mobileFilter = document.querySelector('.mobile_filter');
+    arrowFilter.addEventListener('click', () => {
+        filter.classList.toggle('open');
+        mobileFilter.classList.toggle('open');
+        arrowFilter.classList.toggle('open');
     })
 }
 

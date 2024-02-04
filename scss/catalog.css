@@ -1,0 +1,474 @@
+@charset "UTF-8";
+main {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(238, 238, 238);
+}
+main .container {
+  margin-top: 150px;
+  max-width: 1200px;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+main .container .filter {
+  height: 600px;
+  display: flex;
+  flex: 1 0 240px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  background-color: #E2E2E2;
+}
+main .container .filter .mobile_filter {
+  display: flex;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s linear;
+  background-color: #E2E2E2;
+}
+main .container .filter .mobile_filter .cost_filter,
+main .container .filter .mobile_filter .cost_height {
+  gap: 3%;
+  flex-wrap: wrap;
+  display: flex;
+  padding-inline: 10px;
+}
+main .container .filter .mobile_filter .cost_filter h3,
+main .container .filter .mobile_filter .cost_height h3 {
+  width: 100%;
+}
+main .container .filter .mobile_filter .cost_filter input::-webkit-outer-spin-button,
+main .container .filter .mobile_filter .cost_filter input::-webkit-inner-spin-button,
+main .container .filter .mobile_filter .cost_height input::-webkit-outer-spin-button,
+main .container .filter .mobile_filter .cost_height input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .container .filter .mobile_filter .cost_filter #range-slide-cost,
+main .container .filter .mobile_filter .cost_filter #range-slide-height,
+main .container .filter .mobile_filter .cost_height #range-slide-cost,
+main .container .filter .mobile_filter .cost_height #range-slide-height {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 5px;
+  box-shadow: none;
+}
+main .container .filter .mobile_filter .cost_filter #range-slide-cost .noUi-base .noUi-connects .noUi-connect,
+main .container .filter .mobile_filter .cost_filter #range-slide-height .noUi-base .noUi-connects .noUi-connect,
+main .container .filter .mobile_filter .cost_height #range-slide-cost .noUi-base .noUi-connects .noUi-connect,
+main .container .filter .mobile_filter .cost_height #range-slide-height .noUi-base .noUi-connects .noUi-connect {
+  background: #FF6B6B;
+}
+main .container .filter .mobile_filter .cost_filter #range-slide-cost .noUi-base .noUi-origin .noUi-handle,
+main .container .filter .mobile_filter .cost_filter #range-slide-height .noUi-base .noUi-origin .noUi-handle,
+main .container .filter .mobile_filter .cost_height #range-slide-cost .noUi-base .noUi-origin .noUi-handle,
+main .container .filter .mobile_filter .cost_height #range-slide-height .noUi-base .noUi-origin .noUi-handle {
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  border-radius: 100%;
+  border: none;
+  background-color: #FF6B6B;
+}
+main .container .filter .mobile_filter .cost_filter #range-slide-cost .noUi-base .noUi-origin .noUi-handle-lower,
+main .container .filter .mobile_filter .cost_filter #range-slide-height .noUi-base .noUi-origin .noUi-handle-lower,
+main .container .filter .mobile_filter .cost_height #range-slide-cost .noUi-base .noUi-origin .noUi-handle-lower,
+main .container .filter .mobile_filter .cost_height #range-slide-height .noUi-base .noUi-origin .noUi-handle-lower {
+  right: -17px;
+}
+main .container .filter .mobile_filter .cost_filter #range-slide-cost .noUi-base .noUi-origin .noUi-handle-upper,
+main .container .filter .mobile_filter .cost_filter #range-slide-height .noUi-base .noUi-origin .noUi-handle-upper,
+main .container .filter .mobile_filter .cost_height #range-slide-cost .noUi-base .noUi-origin .noUi-handle-upper,
+main .container .filter .mobile_filter .cost_height #range-slide-height .noUi-base .noUi-origin .noUi-handle-upper {
+  right: -1px;
+}
+main .container .filter .mobile_filter .cost_filter #range-slide-cost .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .mobile_filter .cost_filter #range-slide-cost .noUi-base .noUi-origin .noUi-handle::after,
+main .container .filter .mobile_filter .cost_filter #range-slide-height .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .mobile_filter .cost_filter #range-slide-height .noUi-base .noUi-origin .noUi-handle::after,
+main .container .filter .mobile_filter .cost_height #range-slide-cost .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .mobile_filter .cost_height #range-slide-cost .noUi-base .noUi-origin .noUi-handle::after,
+main .container .filter .mobile_filter .cost_height #range-slide-height .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .mobile_filter .cost_height #range-slide-height .noUi-base .noUi-origin .noUi-handle::after {
+  display: none;
+}
+main .container .filter .mobile_filter .cost_filter input,
+main .container .filter .mobile_filter .cost_height input {
+  width: 45%;
+  height: 35px;
+  border: 2px solid #ccc;
+  /* Установите цвет границы для обычного состояния */
+  text-indent: 7%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  outline: none;
+}
+main .container .filter .mobile_filter .cost_filter input::-moz-placeholder, main .container .filter .mobile_filter .cost_height input::-moz-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+main .container .filter .mobile_filter .cost_filter input::placeholder,
+main .container .filter .mobile_filter .cost_height input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+main .container .filter .mobile_filter .cost_filter input:focus,
+main .container .filter .mobile_filter .cost_height input:focus {
+  border-color: #FF6B6B;
+}
+main .container .filter .mobile_filter .categories,
+main .container .filter .mobile_filter .type {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 10px;
+}
+main .container .filter .mobile_filter .categories h3,
+main .container .filter .mobile_filter .type h3 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+main .container .filter .mobile_filter .categories .some_categories,
+main .container .filter .mobile_filter .type .some_categories {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 7%;
+  align-items: center;
+}
+main .container .filter .mobile_filter .categories .some_categories input[type=checkbox],
+main .container .filter .mobile_filter .type .some_categories input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  position: relative;
+}
+main .container .filter .mobile_filter .categories .some_categories input[type=checkbox]::before,
+main .container .filter .mobile_filter .type .some_categories input[type=checkbox]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-weight: bold;
+}
+main .container .filter .mobile_filter .categories .some_categories input[type=checkbox]:checked,
+main .container .filter .mobile_filter .type .some_categories input[type=checkbox]:checked {
+  background: #fff;
+}
+main .container .filter .mobile_filter .categories .some_categories input[type=checkbox]:checked::before,
+main .container .filter .mobile_filter .type .some_categories input[type=checkbox]:checked::before {
+  color: gray;
+  font-weight: bold;
+}
+main .container .filter .path {
+  display: flex;
+  background-color: #FF6B6B;
+  width: 100%;
+  align-items: center;
+}
+main .container .filter .path P {
+  white-space: nowrap;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 100;
+}
+main .container .filter .path .filter_buttom {
+  display: none;
+}
+main .container .filter .cost_filter,
+main .container .filter .cost_height {
+  gap: 3%;
+  flex-wrap: wrap;
+  display: flex;
+  padding-inline: 10px;
+}
+main .container .filter .cost_filter h3,
+main .container .filter .cost_height h3 {
+  width: 100%;
+}
+main .container .filter .cost_filter input::-webkit-outer-spin-button,
+main .container .filter .cost_filter input::-webkit-inner-spin-button,
+main .container .filter .cost_height input::-webkit-outer-spin-button,
+main .container .filter .cost_height input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .container .filter .cost_filter #range-slider-cost,
+main .container .filter .cost_filter #range-slider-height,
+main .container .filter .cost_height #range-slider-cost,
+main .container .filter .cost_height #range-slider-height {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 5px;
+  box-shadow: none;
+}
+main .container .filter .cost_filter #range-slider-cost .noUi-base .noUi-connects .noUi-connect,
+main .container .filter .cost_filter #range-slider-height .noUi-base .noUi-connects .noUi-connect,
+main .container .filter .cost_height #range-slider-cost .noUi-base .noUi-connects .noUi-connect,
+main .container .filter .cost_height #range-slider-height .noUi-base .noUi-connects .noUi-connect {
+  background: #FF6B6B;
+}
+main .container .filter .cost_filter #range-slider-cost .noUi-base .noUi-origin .noUi-handle,
+main .container .filter .cost_filter #range-slider-height .noUi-base .noUi-origin .noUi-handle,
+main .container .filter .cost_height #range-slider-cost .noUi-base .noUi-origin .noUi-handle,
+main .container .filter .cost_height #range-slider-height .noUi-base .noUi-origin .noUi-handle {
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  border-radius: 100%;
+  border: none;
+  background-color: #FF6B6B;
+}
+main .container .filter .cost_filter #range-slider-cost .noUi-base .noUi-origin .noUi-handle-lower,
+main .container .filter .cost_filter #range-slider-height .noUi-base .noUi-origin .noUi-handle-lower,
+main .container .filter .cost_height #range-slider-cost .noUi-base .noUi-origin .noUi-handle-lower,
+main .container .filter .cost_height #range-slider-height .noUi-base .noUi-origin .noUi-handle-lower {
+  right: -17px;
+}
+main .container .filter .cost_filter #range-slider-cost .noUi-base .noUi-origin .noUi-handle-upper,
+main .container .filter .cost_filter #range-slider-height .noUi-base .noUi-origin .noUi-handle-upper,
+main .container .filter .cost_height #range-slider-cost .noUi-base .noUi-origin .noUi-handle-upper,
+main .container .filter .cost_height #range-slider-height .noUi-base .noUi-origin .noUi-handle-upper {
+  right: -1px;
+}
+main .container .filter .cost_filter #range-slider-cost .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .cost_filter #range-slider-cost .noUi-base .noUi-origin .noUi-handle::after,
+main .container .filter .cost_filter #range-slider-height .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .cost_filter #range-slider-height .noUi-base .noUi-origin .noUi-handle::after,
+main .container .filter .cost_height #range-slider-cost .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .cost_height #range-slider-cost .noUi-base .noUi-origin .noUi-handle::after,
+main .container .filter .cost_height #range-slider-height .noUi-base .noUi-origin .noUi-handle::before,
+main .container .filter .cost_height #range-slider-height .noUi-base .noUi-origin .noUi-handle::after {
+  display: none;
+}
+main .container .filter .cost_filter input,
+main .container .filter .cost_height input {
+  width: 45%;
+  height: 35px;
+  border: 2px solid #ccc;
+  /* Установите цвет границы для обычного состояния */
+  text-indent: 7%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  outline: none;
+}
+main .container .filter .cost_filter input::-moz-placeholder, main .container .filter .cost_height input::-moz-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+main .container .filter .cost_filter input::placeholder,
+main .container .filter .cost_height input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+main .container .filter .cost_filter input:focus,
+main .container .filter .cost_height input:focus {
+  border-color: #FF6B6B;
+}
+main .container .filter .categories,
+main .container .filter .type {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 10px;
+}
+main .container .filter .categories h3,
+main .container .filter .type h3 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+main .container .filter .categories .some_categories,
+main .container .filter .type .some_categories {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 7%;
+  align-items: center;
+}
+main .container .filter .categories .some_categories input[type=checkbox],
+main .container .filter .type .some_categories input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  position: relative;
+}
+main .container .filter .categories .some_categories input[type=checkbox]::before,
+main .container .filter .type .some_categories input[type=checkbox]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-weight: bold;
+}
+main .container .filter .categories .some_categories input[type=checkbox]:checked,
+main .container .filter .type .some_categories input[type=checkbox]:checked {
+  background: #fff;
+}
+main .container .filter .categories .some_categories input[type=checkbox]:checked::before,
+main .container .filter .type .some_categories input[type=checkbox]:checked::before {
+  color: gray;
+  font-weight: bold;
+}
+main .container .items {
+  display: flex;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1vw;
+}
+main .container .items .some_item {
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex: 1 1;
+  min-width: 240px;
+  max-width: 320px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .container .items .some_item a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 4%;
+}
+main .container .items .some_item a .item_name_block {
+  padding-top: 5px;
+  white-space: nowrap;
+  padding-left: 2%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+main .container .items .some_item a .item_cost_block {
+  padding-top: 5px;
+  padding-left: 2%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+main .container .items .some_item a img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (min-width: 1233px) {
+  main .container .items {
+    justify-content: center;
+  }
+  main .container .items .some_item {
+    min-width: 30%;
+  }
+}
+@media (max-width: 800px) {
+  main .container {
+    flex-wrap: wrap;
+  }
+  main .container .filter {
+    flex: 1 1 100%;
+    max-height: 10px;
+    transition: max-height 0.4s ease-in-out;
+  }
+  main .container .filter .mobile_filter {
+    margin-top: 10px;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: flex-start;
+  }
+  main .container .filter .mobile_filter .ranges .cost_filter {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  main .container .filter .mobile_filter .ranges .cost_filter h3 {
+    margin-bottom: 5px;
+  }
+  main .container .filter .mobile_filter .ranges .cost_height {
+    margin-bottom: 25px;
+  }
+  main .container .filter .mobile_filter .ranges .cost_height h3 {
+    margin-bottom: 5px;
+  }
+  main .container .filter .mobile_filter .by_categor .categories,
+  main .container .filter .mobile_filter .by_categor .type {
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  main .container .filter .mobile_filter.open {
+    max-height: 300px;
+  }
+  main .container .filter .path {
+    height: 50px;
+    justify-content: space-between;
+    padding-inline: 20px;
+  }
+  main .container .filter .path .filter_buttom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  main .container .filter .path .filter_buttom .arrow_filter {
+    transition: all 0.3s ease 0s;
+  }
+  main .container .filter .path .filter_buttom .arrow_filter.open {
+    transition: 0.3s ease 0s;
+    transform: rotate(180deg);
+  }
+  main .container .filter .cost_filter,
+  main .container .filter .cost_height,
+  main .container .filter .categories,
+  main .container .filter .type {
+    display: none;
+  }
+  main .container .filter.open {
+    max-height: 280px;
+  }
+}
+@media (max-width: 500px) {
+  main .container .filter {
+    max-height: 570px;
+    max-height: 0px;
+  }
+  main .container .filter .mobile_filter {
+    flex-wrap: wrap;
+  }
+  main .container .filter .mobile_filter.open {
+    max-height: 520px;
+  }
+  main .container .filter.open {
+    max-height: 520px;
+  }
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="../scss/header.css">
+    <link rel="stylesheet" href="../scss/footer.css">
+    <link rel="stylesheet" href="../scss/catalog.css">
+    <link rel="stylesheet" href="../node_modules/nouislider/dist/nouislider.css">
+    <style>
+        @font-face {
+            font-family: "Monserrat";
+            src: url(../fonts/static/Montserrat-Italic.ttf) format('ttf');
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header_top">
+                <nav>
+                    <a href=""><img src="../image/logo.svg" alt="" class="header_logo"></a>
+                    <a href="">
+                        <p class="underline">О НАС</p>
+                    </a>
+                    <div class="down_menu">
+                        <div class="catalog_down">
+                            <a href="">
+                                <p class="underline">КАТАЛОГ</p>
+                            </a>
+                            <img src="../image/arrow.svg" alt="">
+                        </div>
+                        <div class="drop">
+                            <a href="" class="first_item">
+                                <p class="underline">Заборы</p>
+                            </a>
+                            <a href="">
+                                <p class="underline">Колитки/Ворота</p>
+                            </a>
+                            <a href="">
+                                <p class="underline">Металлоконструкции</p>
+                            </a>
+                            <a href="">
+                                <p class="underline">Акции!</p>
+                            </a>
+                            <a href="" class="last_item">
+                                <p class="underline">и т.д.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="">
+                        <p class="underline">РЕМОНТ-МОНТАЖ</p>
+                    </a>
+                    <a href="">
+                        <p class="underline">ГАРАНТИИ</p>
+                    </a>
+                    <a href="">
+                        <p class="underline">ЧаВо</p>
+                    </a>
+                </nav>
+                <div class="burger_menu">
+                    <a href="" class="header_logo_mobile">
+                        <img src="../image/logo.svg" alt="">
+                        <p>Твой-дом.by</p>
+                    </a>
+
+
+                    <div class="header_soc_net">
+                        <a href=""><img src="../image/whatapp.svg" alt=""></a>
+                        <a href="https://t.me/FilipovichDmitry"><img src="../image/telegram.svg" alt=""></a>
+                        <a href="viber://chat?number=%2B375293279026"><img src="../image/viber_header.svg" alt=""></a>
+                    </div>
+
+
+                    <div class="burger_bottom">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="burger_list">
+                        <a href="">
+                            <p><img src="../image/logo.svg" alt="" class="header_logo">Твой-дом.by
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>О НАС</p>
+                        </a>
+                        <div class="catalog_more">
+                            <a href="">
+                                <p>КАТАЛОГ</p>
+                            </a>
+                            <img src="../image/arrow.svg" alt="" class="arrow_more">
+                        </div>
+                        <div class="add_catalog">
+                            <a href="" class="first_item">
+                                <p>Заборы</p>
+                            </a>
+                            <a href="">
+                                <p>Колитки/Ворота</p>
+                            </a>
+                            <a href="">
+                                <p>Металлоконструкции</p>
+                            </a>
+                            <a href="">
+                                <p>Акции!</p>
+                            </a>
+                            <a href="">
+                                <p>и т.д.</p>
+                            </a>
+                        </div>
+                        <a href="">
+                            <p>РЕМОНТ-МОНТАЖ</p>
+                        </a>
+                        <a href="">
+                            <p>ГАРАНТИИ</p>
+                        </a>
+                        <a href="">
+                            <p>и т.д.</p>
+                        </a>
+                        <div class="down_burger_list">
+                            <p> Звонки и сообщения</p>
+                            <p>Пн-Пт: 9:00-18:00</p>
+                            <p>Сб: 9:00-16:00</p>
+                            <p>Вс: выходной</p>
+                        </div>
+                        <p> <a href="tel:+375(29)1234567">+375 (29) 123-45-67</a> - заказать сейчас</p>
+                        <div class="down_burger_soc_net">
+                            <a href=""><img src="../image/whatapp.svg" alt=""></a>
+                            <a href="https://t.me/FilipovichDmitry"><img src="../image/telegram.svg" alt=""></a>
+                            <a href="viber://chat?number=%2B375293279026"><img src="../image/viber_header.svg"
+                                    alt=""></a>
+                        </div>
+                        <div class="wtfk"></div>
+
+                    </nav>
+                </div>
+
+                <marquee class="ticker">бегущая строка бегущая строка бегущая строка бегущая строка </marquee>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="filter">
+                <div class="path">
+                    <p>Главная/Каталог</p>
+                    <div class="filter_buttom">
+                        <p>Фильтр</p>
+                        <img src="../image/arrow.svg" alt="" class="arrow_filter">
+                    </div>
+                </div>
+                <div class="mobile_filter">
+                    <div class="ranges">
+                        <div class="cost_filter">
+                            <h3>Диапазон цен, руб.</h3>
+                            <input type="number" placeholder="от 30 руб." id="min-value_cost" name="min-cost">
+                            <input type="number" placeholder="до 100 руб." id="max-value_cost" name="max-cost">
+                            <div id="range-slide-cost"></div>
+                        </div>
+                        <div class="cost_height">
+                            <h3>Высота секции, м.</h3>
+                            <input type="number" placeholder="от 1,2 м." id="min-value_height" name="min-height">
+                            <input type="number" placeholder="до 2 м." id="max-value_height" name="max-height">
+                            <div id="range-slide-height"></div>
+                        </div>
+                    </div>
+                    <div class="by_categor">
+                        <div class="categories">
+                            <h3>Категории</h3>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>Заборы</p>
+                            </div>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>Ворота/Калитки</p>
+                            </div>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>Металлоконструкции</p>
+                            </div>
+                        </div>
+                        <div class="type">
+                            <h3>Материалы</h3>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>Штакетка</p>
+                            </div>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>Профнастил</p>
+                            </div>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>Сетка рабица</p>
+                            </div>
+                            <div class="some_categories">
+                                <input type="checkbox" name="" id="">
+                                <p>3-d сетка</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cost_filter">
+                    <h3>Диапазон цен, руб.</h3>
+                    <input type="number" placeholder="от 30 руб." id="min-value_cost" name="min-cost">
+                    <input type="number" placeholder="до 100 руб." id="max-value_cost" name="max-cost">
+                    <div id="range-slider-cost"></div>
+                </div>
+                <div class="cost_height">
+                    <h3>Высота секции, м.</h3>
+                    <input type="number" placeholder="от 1,2 м." id="min-value_height" name="min-height">
+                    <input type="number" placeholder="до 2 м." id="max-value_height" name="max-height">
+                    <div id="range-slider-height"></div>
+                </div>
+                <div class="categories">
+                    <h3>Категории</h3>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>Заборы</p>
+                    </div>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>Ворота/Калитки</p>
+                    </div>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>Металлоконструкции</p>
+                    </div>
+                </div>
+                <div class="type">
+                    <h3>Материалы</h3>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>Штакетка</p>
+                    </div>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>Профнастил</p>
+                    </div>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>Сетка рабица</p>
+                    </div>
+                    <div class="some_categories">
+                        <input type="checkbox" name="" id="">
+                        <p>3-d сетка</p>
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+                <div class="some_item">
+                    <a href="">
+                        <img src="../image/metallprof_block1.png" alt="">
+                        <p class="item_name_block">Заборы из профнастила </p>
+                        <p class="item_cost_block">от 70 руб/пог.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+
+            <div class="left">
+                <div class="info">Наши Контакты</div>
+                <div class="down_logo"><img src="../image/logo.svg" alt=""></div>
+                <div class="text">
+                    <p>ИП Дима</p>
+                    <p>Телефон: +375 (29) 327-90-26</p>
+                    <p>Беларусь, 228208, Минск</p>
+                    <p>..............</p>
+                    <p>Email: IPDmitry@yandex.ru</p>
+
+                </div>
+            </div>
+            <div class="right">
+                <div class="info">
+                    Помощь в выборе?
+                </div>
+                <p> Звонки и сообщения</p>
+                <p>Пн-Пт</p>
+                <p>9:00-18:00</p>
+                <p>Сб:</p>
+                <p>9:00-16:00</p>
+                <p>Вс:</p>
+                <p>выходной</p>
+                <div class="soc_net">
+                    <a href=""><img src="../image/whatapp.svg" alt=""></a>
+                    <a href="https://t.me/FilipovichDmitry"><img src="../image/telegram.svg" alt=""></a>
+                    <a href="viber://chat?number=%2B375293279026"><img src="../image/viber.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p class="footer_mortgages">Разделы:</p>
+                <div class="nav">
+                    <p>О НАС</p>
+                    <p>СВЯЗАТЬСЯ</p>
+                    <p>КАТАЛОГ</p>
+                    <p>ГАРАНТИИ</p>
+                    <p>НАШИ РАБОТЫ </p>
+                    <p>FAQ</p>
+                </div>
+                <p class="footer_text">УНП: 123456789, свидетельство выдано Минским райисполкомом</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="../node_modules/nouislider/dist/nouislider.min.js"></script>
+<script src="../js/burger.js"></script>
+<script src="../js/filterRange.js"></script>
+
+</html>
